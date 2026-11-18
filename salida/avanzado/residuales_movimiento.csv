@@ -1,0 +1,9 @@
+variable,participante,n,r2_movimiento,coef_ln_acc_std,coef_ln_acc_dif
+hr_picos_bpm,P01,242,-0.009,-0.136,2.939
+hr_picos_bpm,P02,779,0.025,3.915,-3.147
+hr_picos_bpm,P03,196,0.301,-4.771,13.584
+hr_picos_bpm,P09,50,0.059,-0.871,1.401
+lnrmssd,P01,242,0.161,0.245,-0.029
+lnrmssd,P02,779,0.036,0.064,0.027
+lnrmssd,P03,196,0.024,0.308,-0.323
+lnrmssd,P09,50,0.195,0.025,0.228

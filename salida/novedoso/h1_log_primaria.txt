@@ -1,0 +1,29 @@
+P01_2026-09-26_09-28-01: 2320 s, FC válida 91%, ruido válido 98%
+P01_2026-09-26_10-30-28: 2011 s, FC válida 86%, ruido válido 100%
+P01_2026-09-26_17-15-09: 747 s, FC válida 74%, ruido válido 100%
+P09_2026-09-30_16-02-43: 1836 s, FC válida 81%, ruido válido 100%
+P03_2026-09-26_08-29-43: 1392 s, FC válida 66%, ruido válido 100%
+P03_2026-09-26_09-41-23: 1432 s, FC válida 89%, ruido válido 100%
+P03_2026-09-27_04-03-44: 627 s, FC válida 93%, ruido válido 100%
+P03_2026-09-28_08-45-50: 1512 s, FC válida 89%, ruido válido 100%
+P02_2026-09-26_08-35-05: 944 s, FC válida 92%, ruido válido 100%
+P02_2026-09-26_09-27-48: 3292 s, FC válida 93%, ruido válido 100%
+P02_2026-09-30_07-55-50: 1735 s, FC válida 86%, ruido válido 40%
+
+                  sesion participante  n_eventos  n_controles  dHR_eventos  dHR_controles  contraste
+P01_2026-09-26_09-28-01          P01         27          496         1.44           0.32       1.12
+P01_2026-09-26_10-30-28          P01         24          455         5.48           1.04       4.44
+P01_2026-09-26_17-15-09          P01          1          291       -40.14           0.83     -40.97
+P09_2026-09-30_16-02-43          P09          2          620       -28.27           0.37     -28.64
+P03_2026-09-26_08-29-43          P03          0          365          NaN           1.37        NaN
+P03_2026-09-26_09-41-23          P03         11          464        -1.04           0.44      -1.48
+P03_2026-09-27_04-03-44          P03          1          398        -3.57          -0.74      -2.83
+P03_2026-09-28_08-45-50          P03          5          798         2.65           0.43       2.22
+P02_2026-09-26_08-35-05          P02          1          588         2.59           0.30       2.29
+P02_2026-09-26_09-27-48          P02          8         1895        -0.88          -0.46      -0.43
+P02_2026-09-30_07-55-50          P02          1          944       -24.27           0.62     -24.90
+
+H1  eventos=81 en 5 sesiones | contraste ΔFC (eventos - controles) = +1.71 lpm  IC95%(sesiones)=[-0.66, +3.56]  p(permutación)=0.3373  nulo sd=1.80
+Ajustado por ΔACC y sesión: efecto del evento = -0.24 lpm (IC95% -4.08 a +3.61, p=0.904); efecto ΔACC = +2.32
+Dosis-respuesta (exploratorio): Spearman(ΔdB del evento, ΔFC) = +0.036, p=0.752, n=81
+Por participante (contraste ponderado): {'P01': np.float64(2.68), 'P02': np.float64(-0.43), 'P03': np.float64(-0.32), 'P09': nan}

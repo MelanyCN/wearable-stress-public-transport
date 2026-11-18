@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+DATAE4/
+salida/decodificado/
+salida/ventanas.csv
+salida/gold*.csv
+salida/qc_e4.csv
+salida/novedoso/h2_ventanas.csv

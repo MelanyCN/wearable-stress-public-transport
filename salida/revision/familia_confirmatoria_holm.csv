@@ -1,0 +1,9 @@
+prueba,p_cruda,p_holm
+H1 (primaria),0.3373,1.0
+H2,0.0005,0.004
+A-gold_trafico,0.5274,1.0
+A-gold_ruido,0.4776,1.0
+A-gold_exposicion,0.9353,1.0
+B-gold_trafico,0.2488,1.0
+B-gold_ruido,0.4726,1.0
+B-gold_exposicion,0.8856,1.0

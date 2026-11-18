@@ -1,0 +1,4 @@
+analisis,features,objetivo,bal_acc,nulo_media,nulo_p95,p_bloques_1000,p_holm_fam2
+A,fis+mov,gold_trafico,0.4354,0.3164,0.3661,0.001,0.003
+A,fis+mov,gold_ruido,0.4112,0.3341,0.3792,0.003,0.006
+B,fis+mov+eda,gold_trafico,0.4199,0.3233,0.3914,0.012,0.012

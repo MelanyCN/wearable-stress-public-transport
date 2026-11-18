@@ -1,0 +1,79 @@
+2) Parte de la varianza de FC / ln RMSSD explicada por movimiento (por participante):
+variable      hr_picos_bpm  lnrmssd
+participante                       
+P01                 -0.009    0.161
+P02                  0.025    0.036
+P03                  0.301    0.024
+P09                  0.059    0.195
+A: 1267 ventanas {'P01': 242, 'P02': 779, 'P03': 196, 'P09': 50} | B(>=300 s): 416 {'P01': 208, 'P03': 168, 'P09': 40}
+1) Modelos mixtos: A n=318 (sin traslape), sesiones=11
+         modelo    resultado termino   coef  ic_inf  ic_sup     p   n
+              A hr_picos_bpm ruido_z  0.990  -0.320   2.299 0.138 318
+              A hr_picos_bpm  cong_z -0.217  -1.783   1.349 0.786 318
+              A hr_picos_bpm   acc_z  0.496  -0.808   1.799 0.456 318
+              A hr_picos_bpm  hora_z -3.953  -8.617   0.712 0.097 318
+              A      lnrmssd ruido_z  0.028  -0.033   0.089 0.375 318
+              A      lnrmssd  cong_z -0.006  -0.078   0.067 0.879 318
+              A      lnrmssd   acc_z  0.163   0.103   0.223 0.000 318
+              A      lnrmssd  hora_z  0.122  -0.029   0.273 0.112 318
+              A temp_media_c ruido_z  0.001  -0.060   0.062 0.974 318
+              A temp_media_c  cong_z -0.039  -0.113   0.035 0.307 318
+              A temp_media_c   acc_z -0.079  -0.139  -0.018 0.011 318
+              A temp_media_c  hora_z  5.055   4.128   5.982 0.000 318
+              A       hr_res ruido_z  0.815  -0.503   2.132 0.226 318
+              A       hr_res  cong_z  0.529  -1.048   2.105 0.511 318
+              A       hr_res   acc_z -2.021  -3.334  -0.707 0.003 318
+              A       hr_res  hora_z -0.316  -4.756   4.124 0.889 318
+B_eda_corte300s       ln_eda ruido_z -0.003  -0.019   0.014 0.762 200
+B_eda_corte300s       ln_eda  cong_z  0.005  -0.015   0.026 0.600 200
+B_eda_corte300s       ln_eda   acc_z  0.021   0.004   0.038 0.013 200
+B_eda_corte300s       ln_eda  hora_z  0.108  -0.159   0.375 0.429 200
+clustering v2 A_sin_EDA listo
+clustering v2 B_con_EDA(>=300s) listo
+
+Resumen clustering v2 (mediana y máx de NMI tráfico; máx LOPO):
+                               nmi_trafico_med  nmi_trafico_max  lopo_max  estab_med  sil_med
+analisis          features                                                                   
+A_sin_EDA         fis                    0.019            0.035     0.100      0.431    0.198
+                  fis+mov                0.039            0.073     0.135      0.424    0.182
+                  res                    0.013            0.020     0.132      0.605    0.215
+B_con_EDA(>=300s) fis+eda                0.126            0.205     0.201      0.514    0.184
+                  fis+mov+eda            0.112            0.176     0.210      0.497    0.172
+                  res+eda                0.133            0.166     0.197      0.475    0.192
+[A_sin_EDA] mejor por LOPO: kmeans k=6 fis+mov | NMI tráfico=0.064 p=0.002 | LOPO NMI=0.135
+[B_con_EDA(>=300s)] mejor por LOPO: kmeans k=6 fis+mov+eda | NMI tráfico=0.119 p=0.002 | LOPO NMI=0.210
+4) A_sin_EDA fis listo
+4) A_sin_EDA fis+mov listo
+4) A_sin_EDA res listo
+4) B_con_EDA fis listo
+4) B_con_EDA fis+mov listo
+4) B_con_EDA res listo
+   permutación A_sin_EDA fis: obs=0.308 nulo p95=0.361
+   permutación A_sin_EDA fis+mov: obs=0.446 nulo p95=0.364
+   permutación B_con_EDA fis+mov: obs=0.399 nulo p95=0.320
+
+4) Límite superior (RF, LOPO):
+objetivo               gold_exposicion  gold_ruido  gold_trafico
+analisis  features                                              
+A_sin_EDA fis                    0.252       0.373         0.310
+          fis+mov                0.248       0.419         0.433
+          res                    0.222       0.344         0.297
+B_con_EDA fis+eda                0.204       0.388         0.344
+          fis+mov+eda            0.201       0.408         0.415
+          res+eda                0.190       0.316         0.352
+
+   LOSO (RF):
+objetivo               gold_exposicion  gold_ruido  gold_trafico
+analisis  features                                              
+A_sin_EDA fis                    0.274       0.356         0.321
+          fis+mov                0.278       0.433         0.437
+          res                    0.256       0.368         0.324
+B_con_EDA fis+eda                0.254       0.389         0.353
+          fis+mov+eda            0.243       0.422         0.457
+          res+eda                0.284       0.392         0.393
+
+   Permutación (tráfico):
+ analisis    features  obs_bal_acc  nulo_media  nulo_p95     p
+A_sin_EDA         fis        0.308       0.330     0.361 0.891
+A_sin_EDA     fis+mov        0.446       0.328     0.364 0.010
+B_con_EDA fis+mov+eda        0.399       0.277     0.320 0.010

@@ -1,0 +1,14 @@
+2) Parte de la varianza de FC / ln RMSSD explicada por movimiento (por participante):
+variable      hr_picos_bpm  lnrmssd
+participante                       
+P01                 -0.009    0.161
+P02                  0.025    0.036
+P03                  0.301    0.024
+P09                  0.059    0.195
+{'analisis': 'A', 'features': 'fis+mov', 'objetivo': 'gold_trafico', 'bal_acc': 0.4354290067478648, 'nulo_media': np.float64(0.3164409437082907), 'nulo_p95': np.float64(0.3661140622476099), 'p_bloques_1000': np.float64(0.000999000999000999)}
+{'analisis': 'A', 'features': 'fis+mov', 'objetivo': 'gold_ruido', 'bal_acc': 0.4112097759409441, 'nulo_media': np.float64(0.33406097129080886), 'nulo_p95': np.float64(0.37917105297359116), 'p_bloques_1000': np.float64(0.002997002997002997)}
+{'analisis': 'B', 'features': 'fis+mov+eda', 'objetivo': 'gold_trafico', 'bal_acc': 0.41989771564747896, 'nulo_media': np.float64(0.32332242545939394), 'nulo_p95': np.float64(0.3913842285220395), 'p_bloques_1000': np.float64(0.011988011988011988)}
+analisis    features     objetivo  bal_acc  nulo_media  nulo_p95  p_bloques_1000  p_holm_fam2
+       A     fis+mov gold_trafico   0.4354      0.3164    0.3661           0.001        0.003
+       A     fis+mov   gold_ruido   0.4112      0.3341    0.3792           0.003        0.006
+       B fis+mov+eda gold_trafico   0.4199      0.3233    0.3914           0.012        0.012

@@ -1,0 +1,57 @@
+Ventanas de 30 s, paso 15 s, recorte 60 s por tramo de bus
+Total de ventanas candidatas (bus, recortado): 1498
+
+== Por persona ==
+               sesiones  ventanas  ppg_ok  acc_ok  temp_ok  eda_ok  completas  con_ruido  horas_aprox
+P01 (P1)          3       313     244     313      313     313        244        307         1.30
+P02 (P2)         7       847     779     847      847       0          0        240         3.53
+P03 (P3)         4       265     197     265      265     265        197        265         1.10
+P09 (P4)              1        73      50      73       73      73         50         73         0.30
+TOTAL                15      1498    1270    1498     1498     651        491        885         6.24
+
+== Por sesión ==
+                                         ventanas  completas  ppg_ok  eda_ok  con_ruido
+participante sesion                                                                    
+P01          P01_2026-09-26_09-28-01          146        122     122     146        142
+             P01_2026-09-26_10-30-28          126        101     101     126        124
+             P01_2026-09-26_17-15-09           41         21      21      41         41
+P02          P02_2026-09-26_08-35-05           45          0      36       0         45
+             P02_2026-09-26_09-27-48          164          0     159       0        164
+             P02_2026-09-28_08-21-45          111          0     102       0          0
+             P02_2026-09-28_13-24-09          214          0     191       0          0
+             P02_2026-09-30_07-55-50           84          0      74       0         31
+             sesion_2026-09-18_09-57-46        60          0      58       0          0
+             sesion_2026-09-18_13-22-02       169          0     159       0          0
+P03          P03_2026-09-26_08-29-43           66         28      28      66         66
+             P03_2026-09-26_09-41-23           86         61      61      86         86
+             P03_2026-09-27_04-03-44           32         32      32      32         32
+             P03_2026-09-28_08-45-50           81         76      76      81         81
+P09          P09_2026-09-30_16-02-43           73         50      50      73         73
+
+== Columnas con nulos (cantidad y % de las ventanas) ==
+                 nulos   pct
+evento            1482  98.9
+eda_std_us         847  56.5
+eda_min_us         847  56.5
+eda_media_us       847  56.5
+eda_pend_us_min    847  56.5
+eda_max_us         847  56.5
+ruido_leq_dbfs     613  40.9
+ruido_std_dbfs     613  40.9
+ruido_max_dbfs     613  40.9
+ruido_etq_moda     613  40.9
+vel_media_kmh      236  15.8
+frac_detenido      236  15.8
+vel_std_kmh        236  15.8
+trip_stress        229  15.3
+stress_before      229  15.3
+stress_after       229  15.3
+traffic_at_end     229  15.3
+rmssd_ms            26   1.7
+n_ibi_validos       13   0.9
+hr_picos_bpm        13   0.9
+sdnn_ms             13   0.9
+
+== Sesiones sin ventanas / excluidas ==
+  P01_2026-09-26_08-41-16: E4 solo 20 s de 16 min
+  NoiseGeo_P02_2026-09-28_18-57-04[1]: e4 vacío

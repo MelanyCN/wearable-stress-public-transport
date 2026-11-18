@@ -1,0 +1,9 @@
+analisis,features,k,objetivo,nmi,nulo_media,nulo_p95,p_bloques
+A,fis+mov,6,gold_trafico,0.063,0.0184,0.0264,0.0005
+A,fis+mov,6,gold_ruido,0.0376,0.0122,0.019,0.0005
+A,fis,6,gold_trafico,0.0134,0.0109,0.0166,0.2159
+A,fis,6,gold_ruido,0.0226,0.0165,0.0251,0.1079
+B,fis+eda,6,gold_trafico,0.1311,0.1096,0.1291,0.037
+B,fis+eda,6,gold_ruido,0.0616,0.0439,0.0598,0.036
+B,fis+mov+eda,6,gold_trafico,0.1129,0.0849,0.1033,0.007
+B,fis+mov+eda,6,gold_ruido,0.0684,0.0421,0.0597,0.0095

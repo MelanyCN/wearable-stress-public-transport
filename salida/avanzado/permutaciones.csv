@@ -1,0 +1,4 @@
+analisis,features,obs_bal_acc,nulo_media,nulo_p95,p
+A_sin_EDA,fis,0.3077,0.3297,0.3613,0.8911
+A_sin_EDA,fis+mov,0.4463,0.3285,0.3637,0.0099
+B_con_EDA,fis+mov+eda,0.3987,0.2771,0.3198,0.0099
