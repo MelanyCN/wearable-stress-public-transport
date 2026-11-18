@@ -1,7 +1,7 @@
 # wearable-stress-public-transport
 
 Code, analysis protocols and supplementary material for the paper
-**"Physiological Stress Patterns in Urban Public Transport"** (Cahuana-Nina, Cuela Morales, Zavalaga Orozco; Universidad Nacional de San Agustín de Arequipa).
+**"Physiological Stress Patterns in Urban Public Transport"** (Cahuana-Nina, Cuela, Zavalaga Orozco; Universidad Nacional de San Agustín de Arequipa).
 
 The pipeline converts the raw 20-byte BLE packets of an Empatica E4 wristband, logged with smartphone GPS and microphone level during bus trips in Arequipa, Peru, into synchronised 30-s windows, and evaluates whether physiology reveals the ride context (15 sessions, 4 volunteers).
 
