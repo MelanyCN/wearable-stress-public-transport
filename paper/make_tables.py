@@ -9,7 +9,8 @@ ROOT = Path(__file__).resolve().parents[1]
 REV, AV, NOV = ROOT / "salida" / "revision", ROOT / "salida" / "avanzado", ROOT / "salida" / "novedoso"
 OUT = Path(__file__).resolve().parent
 (OUT / "tables").mkdir(exist_ok=True)
-NOMBRE = {"P01": "P1", "P02": "P2", "P03": "P3", "P09": "P4"}
+import sys; sys.path.insert(0, str(Path(__file__).resolve().parent))
+from labels import PART as NOMBRE, label
 OBJ = {"gold_trafico": "Traffic", "gold_ruido": "Noise", "gold_exposicion": "Exposure"}
 FEAT = {"fis": "physiology", "fis+mov": "physiology + vibration", "res": "movement-residual physiology",
         "fis+eda": "physiology + EDA", "fis+mov+eda": "physiology + EDA + vibration", "res+eda": "residual physiology + EDA"}
@@ -20,7 +21,8 @@ def fp(p):
 
 
 def ses(x):
-    return x.replace("sesion_", "legacy ").replace("2026-", "").replace("_", " ")
+    d = x.split("_", 1)[1].replace("2026-", "").replace("_", " ")
+    return f"{label(x, star=False)}{' (legacy)' if x.startswith('sesion_') else ''}, {d}"
 
 
 def f2(x):

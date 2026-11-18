@@ -1,6 +1,7 @@
 """Figuras del artículo (todas desde los CSV/parquet de salida/)."""
 import sys, warnings; warnings.filterwarnings("ignore")
-sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parents[1])); sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parent))
+from labels import PART, label
 from pathlib import Path
 import numpy as np, pandas as pd
 import matplotlib; matplotlib.use("Agg")
@@ -68,12 +69,10 @@ def fig3():
     for i, p in enumerate(sorted(set(gp))):
         mk = gp == p
         if len(set(y[mk])) == 2:
-            f, t, _ = roc_curve(y[mk], pp[mk]); ax[0].plot(f, t, lw=.9, label=f"{p} ({roc_auc_score(y[mk], pp[mk]):.2f})")
+            f, t, _ = roc_curve(y[mk], pp[mk]); ax[0].plot(f, t, lw=.9, label=f"{PART[p]} ({roc_auc_score(y[mk], pp[mk]):.2f})")
     ax[0].plot([0, 1], [0, 1], ":", color=C["gray"]); ax[0].set_xlabel("false-positive rate"); ax[0].set_ylabel("true-positive rate"); ax[0].set_title("(a) leave-one-participant-out"); ax[0].legend(loc="lower right")
     rows = [(s, roc_auc_score(y[gs == s], ps[gs == s])) for s in sorted(set(gs)) if len(set(y[gs == s])) == 2]
-    cnt = {}; nom = {}
-    for s_ in sorted(set(gs)):
-        p_ = "P02" if s_.startswith("sesion_") else s_[:3]; cnt[p_] = cnt.get(p_, 0) + 1; nom[s_] = f"{p_}-{cnt[p_]}"
+    nom = {s_: label(s_) for s_ in set(gs)}
     rows = sorted(rows, key=lambda r: r[1]); lab = [nom[r[0]] for r in rows]
     ax[1].barh(range(len(rows)), [r[1] for r in rows], color=[C["red"] if r[1] < .7 else C["blue"] for r in rows]); ax[1].axvline(.5, color="k", ls=":", lw=.8)
     ax[1].set_yticks(range(len(rows))); ax[1].set_yticklabels(lab, fontsize=5.8); ax[1].set_xlim(.4, 1.02); ax[1].set_xlabel("AUC held-out session"); ax[1].set_title("(b) leave-one-session-out")
